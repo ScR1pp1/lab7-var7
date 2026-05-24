@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="example4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Используйте жесты в этой области" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEQ-ae-ED4">
+                                <rect key="frame" x="46" y="59" width="300" height="524"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.39734882317060682" blue="0.37820435073762748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
+                                <color key="textColor" red="0.25539072743662589" green="0.0" blue="0.0042565121239437499" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="CEl-Xz-M3q" appends="YES" id="iU3-PZ-O7u"/>
+                                    <outletCollection property="gestureRecognizers" destination="CEl-Xz-M3q" appends="YES" id="bmX-71-Jak"/>
+                                    <outletCollection property="gestureRecognizers" destination="2uc-K7-vbS" appends="YES" id="js3-BV-wks"/>
+                                    <outletCollection property="gestureRecognizers" destination="2uc-K7-vbS" appends="YES" id="zKa-5M-v0h"/>
+                                    <outletCollection property="gestureRecognizers" destination="8xL-Yt-XJK" appends="YES" id="Nft-qG-qYB"/>
+                                    <outletCollection property="gestureRecognizers" destination="8xL-Yt-XJK" appends="YES" id="vP4-lK-QDB"/>
+                                    <outletCollection property="gestureRecognizers" destination="P4A-7B-y1I" appends="YES" id="5Ak-B4-g4D"/>
+                                    <outletCollection property="gestureRecognizers" destination="P4A-7B-y1I" appends="YES" id="io7-DC-rDb"/>
+                                    <outletCollection property="gestureRecognizers" destination="7eY-Z6-wfi" appends="YES" id="thw-Xs-Vo4"/>
+                                    <outletCollection property="gestureRecognizers" destination="7eY-Z6-wfi" appends="YES" id="O6k-CB-xYJ"/>
+                                </connections>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="gestureIndicator" destination="IEQ-ae-ED4" id="IiQ-ge-a9W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="CEl-Xz-M3q">
+                    <connections>
+                        <action selector="tap:" destination="BYZ-38-t0r" id="rK8-ST-XmX"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="2uc-K7-vbS">
+                    <connections>
+                        <action selector="longPress:" destination="BYZ-38-t0r" id="hcv-JI-zT1"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pinchGestureRecognizer id="8xL-Yt-XJK">
+                    <connections>
+                        <action selector="pinch:" destination="BYZ-38-t0r" id="4VB-6S-LYX"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="P4A-7B-y1I">
+                    <connections>
+                        <action selector="rotation:" destination="BYZ-38-t0r" id="Jhe-bS-1bM"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="7eY-Z6-wfi">
+                    <connections>
+                        <action selector="swipe:" destination="BYZ-38-t0r" id="7XL-IQ-2NJ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="19.083969465648853" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
