@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GesturesFigures" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6G8-IS-dec" customClass="DrawingView" customModule="GesturesFigures" customModuleProvider="target">
+                                <rect key="frame" x="16" y="63" width="361" height="537"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1aQ-Zp-7L0" appends="YES" id="YFC-8E-hR0"/>
+                                    <outletCollection property="gestureRecognizers" destination="b5K-3V-Qc6" appends="YES" id="WyS-zf-01D"/>
+                                    <outletCollection property="gestureRecognizers" destination="x54-g1-WMG" appends="YES" id="S0d-zh-XcB"/>
+                                    <outletCollection property="gestureRecognizers" destination="jG9-xO-ETQ" appends="YES" id="PST-gY-GYi"/>
+                                    <outletCollection property="gestureRecognizers" destination="P8H-C2-qsZ" appends="YES" id="2Nv-By-WRm"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afO-fj-xUP">
+                                <rect key="frame" x="90" y="666" width="226" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="drawingView" destination="6G8-IS-dec" id="ZeF-SO-hjJ"/>
+                        <outlet property="gestureLabel" destination="afO-fj-xUP" id="dsf-dg-8Rm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1aQ-Zp-7L0" userLabel="handleTap">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="Vls-cu-hLF"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="b5K-3V-Qc6" userLabel="handleLongPress">
+                    <connections>
+                        <action selector="handleLongPress:" destination="BYZ-38-t0r" id="NqE-qg-xRX"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pinchGestureRecognizer id="x54-g1-WMG" userLabel="handlePinch">
+                    <connections>
+                        <action selector="handlePinch:" destination="BYZ-38-t0r" id="7Qi-Kj-uqQ"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="jG9-xO-ETQ" userLabel="handleRotation">
+                    <connections>
+                        <action selector="handleRotation:" destination="BYZ-38-t0r" id="n6n-Lp-jFT"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="P8H-C2-qsZ" userLabel="handleSwipe">
+                    <connections>
+                        <action selector="handleSwipe:" destination="BYZ-38-t0r" id="Z5n-6w-M5v"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="67.938931297709928" y="110.56338028169014"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
